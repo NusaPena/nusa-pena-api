@@ -17,10 +17,12 @@
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.29.1",
     "globals": "^15.3.0",
-    "nodemon": "^3.1.1"
+    "nodemon": "^3.1.1",
+    "path": "^0.12.7"
   },
   "dependencies": {
     "@hapi/hapi": "^21.3.9",
+    "@hapi/inert": "^7.1.0",
     "nanoid": "^5.0.7"
   }
 }
