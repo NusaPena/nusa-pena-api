@@ -2,7 +2,7 @@ const path = require("path");
 const fs = require("fs");
 
 const storyList = require("./list/story-list");
-const storyDetails = require("./detail/story-detail");
+const storyDetails = require("./details/story-detail");
 
 const test = (request, h) => {
      const response = h.response("<h1>Test Page</h1>").type("text/html").code(200);

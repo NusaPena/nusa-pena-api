@@ -1,4 +1,4 @@
-const storyList = [
+const storyDetails = [
      {
           id: "FBsYg3FUVEzNHnt3",
 		title: "Si Kancil dan Buaya",
@@ -51,6 +51,9 @@ const storyList = [
                "\n \n",
                "Para buaya marah karena merasa tertipu, tetapi mereka tidak bisa berbuat apa-apa. Kancil sudah berada di seberang sungai dan minum air dengan aman. Kancil pun pergi dengan senang hati setelah minum air yang segar.",
           ].join(""),
+          morals: [
+               "Cerita ini mengajarkan kita bahwa <strong>kecerdikan</strong> dan <strong>pikiran</strong> yang cerdas bisa mengatasi segala tantangan. Kancil yang kecil dan lemah bisa menipu buaya-buaya yang besar dan kuat dengan kepintarannya.",
+          ].join(""),
      },
      {
           id: "SAjqL9feDywgacqJ",
@@ -91,6 +94,9 @@ const storyList = [
                "\n \n",
                "Rakyat Pajajaran sangat bersyukur memiliki raja seperti Prabu Siliwangi. Di bawah kepemimpinannya, kerajaan selalu dalam keadaan damai dan sejahtera. Prabu Siliwangi selalu memastikan bahwa setiap orang hidup dengan bahagia dan damai.",
           ].join(""),
+          morals: [
+               "Kisah Prabu Siliwangi mengajarkan nilai penting dari kepemimpinan yang <strong>bijak</strong>, <strong>berani</strong>, dan <strong>adil</strong>. Kisah juga ini menunjukkan bahwa pemimpin yang hebat adalah mereka yang memperhatikan kesejahteraan rakyatnya, berani menghadapi rintangan, dan cerdas dalam membuat keputusan.",
+          ].join(""),
      },
      {
           id: "SGevKvOGavmPGFMe1",
@@ -119,6 +125,9 @@ const storyList = [
                "Jaka Tingkir terus bekerja dengan rajin dan penuh dedikasi. Ia selalu berusaha melindungi kerajaan dari segala bahaya. Berkat keberaniannya, Jaka Tingkir menjadi sosok yang dihormati dan dikagumi oleh semua orang di kerajaan Pajang.",
                "\n \n",
                "Pada akhirnya, Jaka Tingkir tidak hanya dikenal sebagai pemuda yang gagah berani, tetapi juga sebagai pemimpin yang bijaksana. Ia selalu mengingat pesan ibunya untuk berbuat baik dan membantu sesama. Kehidupannya menjadi inspirasi bagi banyak orang.",
+          ].join(""),
+          morals: [
+               "Cerita Jaka Tingkir mengajarkan kita tentang pentingnya <strong>keberanian</strong>, <strong>kerja keras</strong>, dan <strong>kesetiaan</strong>. Dengan sikap yang <strong>baik</strong> dan hati yang <strong>tulus</strong>, kita bisa mencapai hal-hal besar dan menjadi sosok yang dihormati serta dicintai oleh banyak orang.",
           ].join(""),
      },
      {
@@ -150,6 +159,9 @@ const storyList = [
                "\n \n",
                "Gunung Tangkuban Perahu masih bisa dilihat hingga kini, mengingatkan kita akan kisah cinta dan tragedi antara Sangkuriang dan Dayang Sumbi.",
           ].join(""),
+          morals: [
+               "Cerita Sangkuriang mengajarkan kita tentang <strong>akibat dari ketidakjujuran</strong> dan <strong>pentingnya menghormati janji</strong>. Selain itu, cerita ini juga menunjukkan bahwa <strong>cinta dan nafsu harus disertai dengan pengetahuan dan kebijaksanaan</strong>, agar tidak membawa bencana.",
+          ].join(""),
      },
      {
           id: "SGMWGycNzRho6evy",
@@ -174,6 +186,9 @@ const storyList = [
                "\n \n",
                "Cerita ini mengajarkan kita tentang pentingnya bersikap baik kepada siapa pun, bahkan kepada orang yang tidak kita kenal. Kebaikan hati nenek tua tersebut menyelamatkan nyawanya, sementara penduduk desa yang lain mengalami nasib buruk karena keegoisan dan ketidakpedulian mereka.",
           ].join(""),
+          morals: [
+               "Cerita ini mengajarkan kita tentang pentingnya bersikap <strong>baik</strong> kepada siapa pun, bahkan kepada orang yang tidak kita kenal. Kebaikan hati nenek tua tersebut menyelamatkan nyawanya, sementara penduduk desa yang lain mengalami nasib buruk karena <strong>keegoisan</strong> dan <strong>ketidakpedulian</strong> mereka.",
+          ].join(""),
      },
      {
           id: "SGbmTzLKH6Joev6j",
@@ -197,6 +212,9 @@ const storyList = [
                "<em>\"Ya Tuhan, jika benar dia anakku, kutuklah dia menjadi batu jika ia benar-benar durhaka.\"</em>",
                "\n \n",
                "Tak lama setelah itu, langit mendadak gelap dan badai besar melanda. Kapal Malin Kundang hancur diterjang ombak. Malin Kundang yang menyesali perbuatannya, perlahan berubah menjadi batu. Batu tersebut masih bisa dilihat di pantai Air Manis hingga kini, menyerupai sosok manusia yang sedang bersujud.",
+          ].join(""),
+          morals: [
+               "Cerita Malin Kundang mengajarkan kita tentang <strong>pentingnya berbakti kepada orang tua</strong> dan <strong>menghargai asal-usul kita</strong>. Kisah ini juga memperingatkan kita tentang <strong>akibat dari kesombongan dan ketidaksetiaan</strong> terhadap keluarga.",
           ].join(""),
      },
      {
@@ -230,6 +248,13 @@ const storyList = [
                "\n \n",
                "Banjir itu tidak berhenti dan terus meluas hingga membentuk sebuah danau besar yang sekarang dikenal sebagai Danau Toba. Di tengah danau itu, ada sebuah pulau yang dinamai sesuai dengan nama anak mereka, Pulau Samosir.",
           ].join(""),
+          morals: [
+               "Kisah Legenda Danau Toba menyampaikan pesan moral yang kuat tentang pentingnya memegang janji dan menghargai orang lain. Toba, yang melanggar janjinya kepada istrinya, akhirnya menghadapi konsekuensi tragis yang tidak hanya menimpa dirinya tetapi juga seluruh desanya.",
+               "\n",
+               "Cerita ini mengajarkan bahwa setiap janji harus dihormati dan dipatuhi, karena pelanggaran terhadap janji bisa membawa dampak buruk yang tidak terduga. Selain itu, legenda ini juga menekankan nilai-nilai seperti <strong>kesetiaan</strong>, <strong>kejujuran</strong>, dan <strong>tanggung jawab</strong> dalam hubungan antar sesama.",
+               "\n",
+               "Melalui kisah ini, kita diajak untuk selalu berhati-hati dengan kata-kata dan tindakan kita, serta untuk menghormati komitmen yang telah kita buat kepada orang lain.",
+          ].join(""),
 	},
      {
           id: "LGYEOmbqTi07yUGo",
@@ -260,6 +285,11 @@ const storyList = [
                "\n \n",
                "Sejak saat itu, Gunung Merapi tetap tenang dan tidak meletus. Namun, warga desa selalu waspada dan menjaga gunung dengan baik, serta menghormati makhluk halus yang tinggal di dalamnya.",
           ].join(""),
+          morals: [
+               "Legenda Gunung Merapi mengajarkan tentang pentingnya <strong>menjaga keseimbangan dan keharmonisan dengan alam</strong>, <strong>menghormati kekuatan alam</strong>, serta hidup dengan <strong>rendah hati</strong> dan <strong>penuh kesadaran akan bahaya bencana alam</strong>",
+               "\n",
+               "Kisah ini juga menekankan pentingnya <strong>kearifan lokal dan tradisi</strong> dalam menjaga <strong>keselamatan dan kesejahteraan masyarakat</strong>.",
+          ].join(""),
      },
      {
           id: "LG4Ghbii7IiwToTi",
@@ -289,6 +319,9 @@ const storyList = [
                "Tidak lama kemudian, seluruh desa terendam air, termasuk rumah Nyai Endit. Nyai Endit dan semua hartanya tenggelam dalam air yang sangat deras. Desa itu berubah menjadi sebuah danau yang besar, yang sekarang dikenal sebagai Situ Bagendit.",
                "\n \n",
                "Penduduk desa yang selamat dari banjir merasa bersyukur karena mereka terbebas dari kekejaman Nyai Endit. Mereka percaya bahwa danau itu adalah tanda dari Tuhan untuk mengingatkan manusia agar tidak serakah dan harus berbagi dengan sesama.",
+          ].join(""),
+          morals: [
+               "Legenda Situ Bagendit ini mengajarkan kita untuk <strong>selalu berbagi</strong> dan <strong>tidak menjadi orang yang pelit atau serakah</strong>. Kita harus selalu <strong>peduli</strong> dan <strong>membantu sesama</strong> yang membutuhkan.",
           ].join(""),
      },
      {
@@ -324,6 +357,11 @@ const storyList = [
                "\n \n",
                "Raja dan seluruh kerajaan sangat terkesan dengan kebaikan hati Joko Kendil. Mereka mengadakan pesta besar untuk merayakan kebahagiaan Putri Endah dan kebaikan Joko Kendil. Putri Endah dan Joko Kendil menjadi sahabat baik dan sering berbagi cerita dan tawa bersama.",
           ].join(""),
+          morals: [
+               "Kisah Si Joko Kendil mengajarkan kita bahwa <strong>kebaikan hati</strong> dan <strong>kebijaksanaan</strong> adalah <strong>harta yang paling berharga</strong>. Jangan pernah menilai seseorang dari penampilannya, tetapi <strong>lihatlah hatinya yang baik dan cerdas</strong>.",
+               "\n",
+               "Kebaikan yang kita berikan kepada orang lain akan membawa kebahagiaan bagi semua.",
+          ].join(""),
      },
 	{
 		id: "DGkeMnmpb_PRTY8f",
@@ -355,6 +393,12 @@ const storyList = [
                "Raden Putra sangat bangga dengan keberanian dan keteguhan hati Cindelaras. Ia mengangkat Cindelaras sebagai putra mahkota. Cindelaras tumbuh menjadi pemuda yang bijaksana dan siap untuk memimpin kerajaan di masa depan. Kisah Cindelaras menjadi inspirasi bagi rakyat Jenggala tentang pentingnya kejujuran dan kebenaran.",
                "\n \n",
                "Kerajaan Jenggala pun kembali damai dan sejahtera. Cindelaras bersama ayam ajaibnya menjadi legenda yang diceritakan dari generasi ke generasi. Mereka diingat sebagai simbol keadilan dan keberanian yang abadi dalam hati masyarakat.",
+          ].join(""),
+          morals: [
+               "Kisah Cinderalas mengandung beberapa pesan moral penting, di antaranya bahwa kebenaran akan selalu terungkap meskipun butuh waktu. <strong>Kesabaran</strong> dan <strong>keteguhan</strong> hati permaisuri saat diasingkan, serta <strong>kebaikan</strong> dan <strong>kebijaksanaan</strong> yang diajarkan kepada Cinderalas, menunjukkan bahwa nilai-nilai positif ini akan mendapatkan balasan yang baik",
+               "\n",
+               "<strong>Kejujuran</strong> dan <strong>keberanian</strong> Cinderalas dalam menghadapi tantangan, serta keadilan yang akhirnya ditegakkan oleh Raja Raden Putra, mengajarkan bahwa kebenaran dan keadilan akan menang pada akhirnya.",
+               "\n",
           ].join(""),
 	},
      {
@@ -392,6 +436,9 @@ const storyList = [
                "\n \n",
                "Akhirnya, ibu tiri dan Bawang Merah meminta maaf kepada Bawang Putih. Mereka berjanji untuk tidak bersikap jahat lagi. Sejak saat itu, mereka hidup bersama dengan damai dan saling membantu.",
           ].join(""),
+          morals: [
+               "Dongeng Bawang Putih dan Bawang Merah mengajarkan bahwa <strong>kebaikan hati</strong> dan <strong>esabaran</strong> akan selalu mendapatkan balasan yang baik, sementara <strong>keserakahan</strong> dan <strong>kejahatan</strong> hanya akan membawa penderitaan. Jadi, mari kita selalu bersikap baik dan membantu antar sesama.",
+          ].join(""),
      },
      {
           id: "DGmwB4KgKp3bBlu9",
@@ -417,6 +464,9 @@ const storyList = [
                "Candra Kirana pun kembali ke istana dengan diantar oleh nenek tua. Ayahnya, Raja Kertamarta, sangat senang dan bersyukur karena putri kesayangannya kembali. Dewi Galuh, yang menyesali perbuatannya, meminta maaf kepada Candra Kirana dan mereka pun hidup rukun kembali.",
                "\n \n",
                "Akhirnya, Candra Kirana menikah dengan seorang pangeran tampan dari kerajaan tetangga dan mereka hidup bahagia selamanya.",
+          ].join(""),
+          morals: [
+               "Dongeng Keong Emas mengajarkan bahwa <strong>kebaikan hati</strong> dan </strong>kesabaran</strong> akan selalu membawa kebahagiaan. Kejujuran dan kebaikan akan selalu mendapatkan balasan yang baik, dan orang yang jahat akan mendapatkan hukuman atas perbuatannya. Jadi, mari kita selalu bersikap baik dan tulus kepada semua orang.",
           ].join(""),
      },
      {
@@ -452,6 +502,11 @@ const storyList = [
                "\n \n",
                "Timun Emas berhasil kembali ke rumah dengan selamat. Mbok Srini sangat bahagia melihat Timun Emas selamat. Mereka berdua hidup bahagia selamanya tanpa gangguan dari raksasa lagi.",
           ].join(""),
+          morals: [
+               "Dongeng Timun Emas mengajarkan kita bahwa <strong>keberanian</strong> dan <strong>kecerdikan</strong> dapat mengalahkan kekuatan yang besar. Dengan tidak mudah menyerah dan menggunakan akal, kita dapat mengatasi berbagai rintangan dalam hidup.",
+               "\n",
+               "Selain itu, kisah ini juga mengajarkan pentingnya menjaga janji dan menghadapi konsekuensi dari perjanjian yang dibuat.",
+          ].join(""),
      },
      {
           id: "DGf8uxoLgyBK6zYn",
@@ -480,7 +535,27 @@ const storyList = [
                "\n \n",
                "Jaka Tarub dan anaknya hidup dengan rindu dan kesedihan. Namun, mereka selalu mengingat Nawang Wulan dengan cinta.",
           ].join(""),
+          morals: [
+               "Dongeng Jaka Tarub adalah tentang <strong>kebaikan hati</strong>, <strong>pengorbanan</strong>, dan <strong>cinta yang tulus</strong>.",
+               "\n",
+               "Selain itu, kisah ini juga mengajarkan bahwa kebaikan hati, pengorbanan, dan cinta yang tulus adalah hal-hal yang sangat berharga dalam kehidupan.",
+          ].join(""),
+     },
+     {
+          id: "",
+		title: "",
+		category: "",
+		location: "",
+          imageId: "test",
+		storyDesc: [
+               "",
+               "\n \n",
+          ].join(""),
+          morals: [
+               "",
+               "\n",
+          ].join(""),
      },
 ];
 
-module.exports = storyList;
+module.exports = storyDetails;
