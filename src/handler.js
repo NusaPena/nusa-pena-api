@@ -11,7 +11,7 @@ const test = (request, h) => {
 };
 
 const getSmallImageHandler = (request, h) => {
-     const { imageId } = request.params;     // * http://localhost:9000/images/small/test.jpg
+     const { imageId } = request.params;     // * http://localhost:5000/images/small/test.jpg
 
      const imagePath = path.join(__dirname, "images", "small", `${imageId}.jpg`);
           if (fs.existsSync(imagePath)) {
@@ -28,7 +28,7 @@ const getSmallImageHandler = (request, h) => {
 };
 
 const getMediumImageHandler = (request, h) => {
-     const { imageId } = request.params;     // * http://localhost:9000/images/medium/test.jpg
+     const { imageId } = request.params;     // * http://localhost:5000/images/medium/test.jpg
 
      const imagePath = path.join(__dirname, "images", "medium", `${imageId}.jpg`);
           if (fs.existsSync(imagePath)) {
@@ -45,7 +45,7 @@ const getMediumImageHandler = (request, h) => {
 };
 
 const getLargeImageHandler = (request, h) => {
-     const { imageId } = request.params;     // * http://localhost:9000/images/large/test.jpg
+     const { imageId } = request.params;     // * http://localhost:5000/images/large/test.jpg
 
      const imagePath = path.join(__dirname, "images", "large", `${imageId}.jpg`);
           if (fs.existsSync(imagePath)) {
@@ -65,32 +65,30 @@ const getAllStoriesHandler = (request, h) => {
      const { title, category, location } = request.query;
      let filteredStory = [...storyList];
 
-     if (title) {                    // * http://localhost:9000/list?title=Cinderalas
+     if (title) {                    // * http://localhost:5000/list?title=Cinderalas
           const filteredTitle = title.toLowerCase();
                filteredStory = filteredStory.filter((story) => story.title.toLowerCase().includes(filteredTitle));
      }
 
-     if (category) {                // * http://localhost:9000/list?category=Dongeng
+     if (category) {                // * http://localhost:5000/list?category=Dongeng
           const filteredType = category.toLowerCase();
                filteredStory = filteredStory.filter((story) => story.category.toLowerCase().includes(filteredType));
      }
 
-     if (location) {                // * http://localhost:9000/list?location=Jawa%20Timur
+     if (location) {                // * http://localhost:5000/list?location=Jawa%20Timur
           const filteredLocation = location.toLowerCase();
                filteredStory = filteredStory.filter((story) => story.location.toLowerCase().includes(filteredLocation));
      }
 
      return h.response({
           status: "success",
-          data: {
-               stories: filteredStory.map((story) => ({
-                    id: story.id,
-                    title: story.title,
-                    category: story.category,
-                    imageId: story.imageId,
-                    storyDesc: story.storyDesc,
-               })),
-          },
+          stories: filteredStory.map((story) => ({
+               id: story.id,
+               title: story.title,
+               category: story.category,
+               imageId: story.imageId,
+               storyDesc: story.storyDesc,
+          })),
      }).code(200);
 };
 
@@ -101,7 +99,7 @@ const getStoryDetailById = (request, h) => {
           if (story !== undefined) {
                return {
                     status: "success",
-                    data: {
+                    stories: {
                          story,
                     },
                };
