@@ -1,8 +1,8 @@
 const path = require("path");
 const fs = require("fs");
 
-const storyList = require("./list/story-list");
-const storyDetails = require("./details/story-detail");
+const storyList = require("./stories-data/stories");
+const storyDetails = require("./stories-data/stories");
 
 const test = (request, h) => {
      const response = h.response("<h1>Test Page</h1>").type("text/html").code(200);
@@ -67,17 +67,23 @@ const getAllStoriesHandler = (request, h) => {
 
      if (title) {                    // * http://localhost:5000/list?title=Cinderalas
           const filteredTitle = title.toLowerCase();
-               filteredStory = filteredStory.filter((story) => story.title.toLowerCase().includes(filteredTitle));
+               filteredStory = filteredStory.filter(
+                    (story) => story.title.toLowerCase().includes(filteredTitle),
+               );
      }
 
      if (category) {                // * http://localhost:5000/list?category=Dongeng
           const filteredType = category.toLowerCase();
-               filteredStory = filteredStory.filter((story) => story.category.toLowerCase().includes(filteredType));
+               filteredStory = filteredStory.filter(
+                    (story) => story.category.toLowerCase().includes(filteredType),
+               );
      }
 
      if (location) {                // * http://localhost:5000/list?location=Jawa%20Timur
           const filteredLocation = location.toLowerCase();
-               filteredStory = filteredStory.filter((story) => story.location.toLowerCase().includes(filteredLocation));
+               filteredStory = filteredStory.filter(
+                    (story) => story.location.toLowerCase().includes(filteredLocation),
+               );
      }
 
      return h.response({
