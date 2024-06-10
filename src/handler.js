@@ -62,7 +62,7 @@ const getLargeImageHandler = (request, h) => {
 };
 
 const getAllStoriesHandler = (request, h) => {
-     const { title, category, location } = request.query;
+     const { title, category } = request.query;
      let filteredStory = [...storyList];
 
      if (title) {                    // * http://localhost:5000/list?title=Cinderalas
@@ -73,11 +73,6 @@ const getAllStoriesHandler = (request, h) => {
      if (category) {                // * http://localhost:5000/list?category=Dongeng
           const filteredType = category.toLowerCase();
                filteredStory = filteredStory.filter((story) => story.category.toLowerCase().includes(filteredType));
-     }
-
-     if (location) {                // * http://localhost:5000/list?location=Jawa%20Timur
-          const filteredLocation = location.toLowerCase();
-               filteredStory = filteredStory.filter((story) => story.location.toLowerCase().includes(filteredLocation));
      }
 
      return h.response({
@@ -97,12 +92,12 @@ const getStoryDetailById = (request, h) => {
      const { storyId } = request.params;
      console.log(`Received request for storyId: ${storyId}`);    // ? For temporary testing
 
-     const story = storyDetails.filter((indexStory) => indexStory.id === storyId)[0];
-          if (story !== undefined) {
-               return {
+     const story = storyDetails.find((indexStory) => indexStory.id === storyId);
+          if (story) {
+               return h.response({
                     status: "success",
                     story,
-               };
+               }).code(200);
           }
 
      const response = h.response({
