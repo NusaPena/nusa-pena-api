@@ -54,6 +54,9 @@ const stories = [
           morals: [
                "Cerita ini mengajarkan kita bahwa <strong>kecerdikan</strong> dan <strong>pikiran</strong> yang cerdas bisa mengatasi segala tantangan. Kancil yang kecil dan lemah bisa menipu buaya-buaya yang besar dan kuat dengan kepintarannya.",
           ].join(""),
+          synopsis: [
+               "Suatu hari, Kancil yang cerdik merasa haus. Untuk minum air sungai yang dijaga buaya, Kancil menipu buaya dengan berpura-pura menghitung mereka.",
+          ].join(""),
      },
      {
           id: "fbpznbbcwh54ifzm",
@@ -93,6 +96,9 @@ const stories = [
           morals: [
                "Cerita ini mengajarkan kita bahwa <strong>kesabaran</strong> dan <strong>ketekunan</strong> bisa mengalahkan kecepatan dan kesombongan. Kura-Kura yang lambat namun gigih berhasil memenangkan perlombaan melawan Kelinci yang cepat namun sombong. Kisah ini mengingatkan kita untuk selalu rendah hati dan tidak meremehkan orang lain.",
           ].join(""),
+          synopsis: [
+               "Kelinci menantang Kura-Kura lomba lari. Namun karena kesombongannya Kelinci langsung berlari dan tidur di tengah lomba, di sisi lain Kura-Kura dengan sabar terus berjalan dan akhirnya menang.",
+          ].join(""),
      },
      {
           id: "fbt1gpv6ldm3ybak",
@@ -119,6 +125,9 @@ const stories = [
           ].join(""),
           morals: [
                "Cerita ini mengajarkan kita tentang pentingnya kerja keras, persiapan, dan kebijaksanaan dalam menghadapi masa sulit. Semut, dengan kerja kerasnya, berhasil melewati musim kemarau dengan baik, sementara belalang, yang tidak mempersiapkan dirinya, mengalami kesulitan. Namun, belalang belajar dari kesalahannya dan belajar untuk bekerja keras setelah menghadapi masa sulit.",
+          ].join(""),
+          synopsis: [
+               "Semut bekerja keras menyimpan makanan sementara belalang hanya bermain. Ketika kemarau tiba, mereka kelaparan dan meminta bantuan semut. Meski makanan terbatas, semut tetap membantu mereka.",
           ].join(""),
      },
      {
@@ -151,6 +160,9 @@ const stories = [
                "Meskipun bebek buruk rupa tidak memiliki penampilan yang menarik, dia memiliki <strong>hati yang baik dan ramah terhadap orang lain</strong>. Hal ini membuatnya mendapatkan perhatian dan persahabatan dari rajawali.",
                "Kisah ini mengingatkan kita untuk <strong>tidak menilai seseorang dari penampilan fisiknya, tetapi dari hati dan perbuatannya</strong>.",
           ].join(""),
+          synopsis: [
+               "Di sebuah desa, hidup bebek buruk rupa yang sering diolok-olok. Saat rajawali datang, semua hewan ingin mendapat perhatiannya. Meski kurang percaya diri, ia pun berteman dengan Rajawali karena kebaikan hatinya.",
+          ].join(""),
      },
      {
           id: "fbojeo4yr6gnpwa7",
@@ -182,6 +194,9 @@ const stories = [
           morals: [
                "Cerita ini mengajarkan kita bahwa <strong>kecerdikan harus digunakan untuk hal-hal yang baik dan positif</strong>. Meskipun Kancil berhasil mencuri ketimun dengan triknya, tindakan tersebut hanya menyebabkan kerugian bagi orang lain.",
                "Dari pengalaman ini, Kancil belajar bahwa egoisme dan kejahatan tidak akan membawa kebahagiaan jangka panjang. Sebaliknya, kita harus <strong>menggunakan kecerdikan kita untuk hal yang benar dan menguntungkan bersama</strong>.",
+          ].join(""),
+          synopsis: [
+               "Kancil merasa lapar dan menemukan kebun ketimun. Ia pun meminta bantuan ular untuk mencurinya. Meski berhasil, ular tertangkap oleh petani. Kancil yang merasa bersalah bersumpah untuk tidak mencuri.",
           ].join(""),
      },
      {
@@ -226,6 +241,9 @@ const stories = [
           morals: [
                "Kisah Prabu Siliwangi mengajarkan nilai penting dari kepemimpinan yang <strong>bijak</strong>, <strong>berani</strong>, dan <strong>adil</strong>. Kisah juga ini menunjukkan bahwa pemimpin yang hebat adalah mereka yang memperhatikan kesejahteraan rakyatnya, berani menghadapi rintangan, dan cerdas dalam membuat keputusan.",
           ].join(""),
+          synopsis: [
+               "Prabu Siliwangi sang raja Pajajaran memperlihatkan kebaikan hatinya dengan membantu rakyat dan memperlihatkan keberaniannya ketika kerajaan tetangga menyerang.",
+          ].join(""),
      },
      {
           id: "sgekvvogavmpgfme1",
@@ -257,6 +275,9 @@ const stories = [
           ].join(""),
           morals: [
                "Cerita Jaka Tingkir mengajarkan kita tentang pentingnya <strong>keberanian</strong>, <strong>kerja keras</strong>, dan <strong>kesetiaan</strong>. Dengan sikap yang <strong>baik</strong> dan hati yang <strong>tulus</strong>, kita bisa mencapai hal-hal besar dan menjadi sosok yang dihormati serta dicintai oleh banyak orang.",
+          ].join(""),
+          synopsis: [
+               "Jaka Tingkir merantau ke Pajang untuk mencari ilmu. Di sana, ia melawan seekor banteng yang sedang mengamuk. Karena keberaniannya ia menjadi sosok yang dihormati di kerajaan Pajang.",
           ].join(""),
      },
      {
@@ -291,6 +312,9 @@ const stories = [
           morals: [
                "Cerita Sangkuriang mengajarkan kita tentang <strong>akibat dari ketidakjujuran</strong> dan <strong>pentingnya menghormati janji</strong>. Selain itu, cerita ini juga menunjukkan bahwa <strong>cinta dan nafsu harus disertai dengan pengetahuan dan kebijaksanaan</strong>, agar tidak membawa bencana.",
           ].join(""),
+          synopsis: [
+               "Pemuda sakti bernama Sangkuriang ingin menikahi Dayang Sumbi, ibu kandungnya. Dayang Sumbi mengajukan syarat agar Sangkuriang membangun perahu raksasa dalam satu malam.",
+          ].join(""),
      },
      {
           id: "sgmwgycnzrho6evy",
@@ -318,6 +342,9 @@ const stories = [
           morals: [
                "Cerita ini mengajarkan kita tentang pentingnya bersikap <strong>baik</strong> kepada siapa pun, bahkan kepada orang yang tidak kita kenal. Kebaikan hati nenek tua tersebut menyelamatkan nyawanya, sementara penduduk desa yang lain mengalami nasib buruk karena <strong>keegoisan</strong> dan <strong>ketidakpedulian</strong> mereka.",
           ].join(""),
+          synopsis: [
+               "Baru Klinthing yang merupakan inkarnasi naga merasa kelaparan, namun ketika seluruh desa menolaknya hanya seorang nenek yang membantunya. Karena ini sang nenek selamat saat bencana terjadi.",
+          ].join(""),
      },
      {
           id: "sgbmtzlkh6joev6j",
@@ -344,6 +371,9 @@ const stories = [
           ].join(""),
           morals: [
                "Cerita Malin Kundang mengajarkan kita tentang <strong>pentingnya berbakti kepada orang tua</strong> dan <strong>menghargai asal-usul kita</strong>. Kisah ini juga memperingatkan kita tentang <strong>akibat dari kesombongan dan ketidaksetiaan</strong> terhadap keluarga.",
+          ].join(""),
+          synopsis: [
+               "Malin Kundang yang pulang dari merantau lupa diri karena harta sampai mengusir ibunya yang miskin. Sang ibu yang terluka pun mengutuknya menjadi batu.",
           ].join(""),
      },
      {
@@ -384,6 +414,9 @@ const stories = [
                "\n",
                "Melalui kisah ini, kita diajak untuk selalu berhati-hati dengan kata-kata dan tindakan kita, serta untuk menghormati komitmen yang telah kita buat kepada orang lain.",
           ].join(""),
+          synopsis: [
+               "Toba menemukan ikan emas yang berubah menjadi gadis cantik. Mereka menikah dan memiliki anak bernama Samosir. Namun, sebuah kesalahan yang Toba lakukan membawa bencana ke desanya.",
+          ].join(""),
 	},
      {
           id: "lgyeombqti07yugo",
@@ -419,6 +452,9 @@ const stories = [
                "\n",
                "Kisah ini juga menekankan pentingnya <strong>kearifan lokal dan tradisi</strong> dalam menjaga <strong>keselamatan dan kesejahteraan masyarakat</strong>.",
           ].join(""),
+          synopsis: [
+               "Di tanah Jawa yang damai tedapat Gunung Merapi yang perkasa. Namun, kedamaian terganggu saat Raja Mahesa Sura dan Patihnya meninggalkan gunung dan memicu letusan.",
+          ].join(""),
      },
      {
           id: "lg4ghbii7iiwtoti",
@@ -451,6 +487,9 @@ const stories = [
           ].join(""),
           morals: [
                "Legenda Situ Bagendit ini mengajarkan kita untuk <strong>selalu berbagi</strong> dan <strong>tidak menjadi orang yang pelit atau serakah</strong>. Kita harus selalu <strong>peduli</strong> dan <strong>membantu sesama</strong> yang membutuhkan.",
+          ].join(""),
+          synopsis: [
+               "Seorang wanita kaya yang pelit bernama Nyai Endit menolak berbagi harta dengan siapapun. Karena keserakahannya seorang kakek mengutuknya dan menghancurkan segalanya.",
           ].join(""),
      },
      {
@@ -491,6 +530,9 @@ const stories = [
                "\n",
                "Kebaikan yang kita berikan kepada orang lain akan membawa kebahagiaan bagi semua.",
           ].join(""),
+          synopsis: [
+               "Joko Kendil memiliki tubuh kecil seperti kendil. Meski sering diejek, ia tetap menjadi anak yang baik. Karena kebaikan ini keberuntungan datang kepadanya.",
+          ].join(""),
      },
      {
           id: "lgajekw1qof8uegt",
@@ -530,6 +572,9 @@ const stories = [
                "\n",
                "Selain itu, <strong>doa</strong> dan <strong>kepercayaan pada Tuhan Yang Maha Esa</strong> dalam menghadapi situasi sulit juga menjadi nilai penting yang diajarkan oleh kisah ini.",
           ].join(""),
+          synopsis: [
+               "Putri Sri Tanjung menikah dengan Raden Sidapaksa dan hidup bahagia. Namun, kebahagiaan mereka terganggu ketika sang Putri difitnah oleh seorang menteri jahat.",
+          ].join(""),
      },
 	{
 		id: "dgkemnmpb_prty8f",
@@ -567,6 +612,9 @@ const stories = [
                "\n",
                "<strong>Kejujuran</strong> dan <strong>keberanian</strong> Cinderalas dalam menghadapi tantangan, serta keadilan yang akhirnya ditegakkan oleh Raja Raden Putra, mengajarkan bahwa kebenaran dan keadilan akan menang pada akhirnya.",
                "\n",
+          ].join(""),
+          synopsis: [
+               "Cindelaras dibesarkan oleh ibunya, sang ibu adalah permaisuri yang dituduh meracuni raja dan diusir dari istana. Dengan ditemani ayam ajaib, Cindelaras memulai perjalanan mencari keadilan.",
           ].join(""),
 	},
      {
@@ -607,6 +655,9 @@ const stories = [
           morals: [
                "Dongeng Bawang Putih dan Bawang Merah mengajarkan bahwa <strong>kebaikan hati</strong> dan <strong>esabaran</strong> akan selalu mendapatkan balasan yang baik, sementara <strong>keserakahan</strong> dan <strong>kejahatan</strong> hanya akan membawa penderitaan. Jadi, mari kita selalu bersikap baik dan membantu antar sesama.",
           ].join(""),
+          synopsis: [
+               "Bawang Putih tinggal bersama keluarganya. Meski selalu diperlakukan tidak adil, ia tetap sabar. Suatu hari, seorang nenek tua merubah kehidupannya bersama keluarga.",
+          ].join(""),
      },
      {
           id: "dgmwb4kgkp3bblu9",
@@ -635,6 +686,9 @@ const stories = [
           ].join(""),
           morals: [
                "Dongeng Keong Emas mengajarkan bahwa <strong>kebaikan hati</strong> dan </strong>kesabaran</strong> akan selalu membawa kebahagiaan. Kejujuran dan kebaikan akan selalu mendapatkan balasan yang baik, dan orang yang jahat akan mendapatkan hukuman atas perbuatannya. Jadi, mari kita selalu bersikap baik dan tulus kepada semua orang.",
+          ].join(""),
+          synopsis: [
+               "Putri Candra Kirana disihir menjadi keong emas oleh penyihir jahat. Ia pun dirawat oleh nenek tua, namun ketika nenek itu tahu identitas aslinya, ia pun membantunya melawan penyihir jahat.",
           ].join(""),
      },
      {
@@ -675,6 +729,9 @@ const stories = [
                "\n",
                "Selain itu, kisah ini juga mengajarkan pentingnya menjaga janji dan menghadapi konsekuensi dari perjanjian yang dibuat.",
           ].join(""),
+          synopsis: [
+               "Seorang janda bernama Mbok Srini ingin memiliki anak. Seekor raksasa pun muncul dan menjanjikan seorang anak, tapi dengan syarat diberikan kepadanya ketika ia berusia 17 tahun.",
+          ].join(""),
      },
      {
           id: "dgf8uxolgybk6zyn",
@@ -683,30 +740,45 @@ const stories = [
 		location: "Jawa Tengah",
           imageId: "test",
           storyDesc: [
-               "Dahulu kala, di sebuah desa yang indah di Jawa, hiduplah seorang pemuda yang baik hati bernama Jaka Tarub. Jaka tinggal bersama ibunya dan menjalani kehidupan sederhana sebagai nelayan.",
+               "Dahulu kala, di sebuah desa yang indah di Jawa,  hiduplah seorang pemuda bernama Jaka Tarub. Dia merupakan pemuda desa yang gemar berburu.",
                "\n \n",
-               "Suatu hari, ketika Jaka sedang mencari ikan di sungai, dia melihat tujuh bidadari turun dari langit. Bidadari-bidadari itu sedang mandi di sungai, dan pakaian mereka diambil oleh seekor anjing nakal.",
+               "Kemudian suaru hari, dia memutuskan untuk mencari burung di tengah hutan. Namun, meskipun telah berusaha sepanjang hari, ia tidak menemukan satupun burung. Akhirnya ia memutuskan untuk masuk ke hutan semakin dalam.",
                "\n",
-               "<em>\"Bantu kami, tolong ambilkan pakaian kami!\"</em> seru salah satu bidadari.",
+               "Di tengah belantara, Jaka mendengar suara beberapa wanita yang sedang berbincang. Suara perempuan itu beradu dengan suara air gemericik. Karena penasaran, Jaka Tarub mencari sumber suara tersebut.",
                "\n \n",
-               "Jaka merasa kasihan melihat mereka dan tanpa ragu langsung mengambil pakaian salah satu bidadari yang jatuh ke tanah.",
-               "<em>\"Tolong ambil pakaianku yang ini!\"</em> teriak bidadari yang lain.",
+               "Betapa terkejutnya dia saat melihat sekelompok bidadari yang tengah mandi di telaga. Paras para bidadari itu sangatlah cantik. Kemudian timbul sebuah ide nakal.",
                "\n \n",
-               "Setelah mereka selesai mandi, bidadari-bidadari itu mencari pakaian mereka. Namun, salah satu pakaian tidak ditemukan.",
-               "<em>\"Pakaianku hilang! Bagaimana aku bisa kembali ke surga?\"</em> tanya bidadari yang kehilangan pakaiannya, yang bernama Nawang Wulan.",
+               "Jaka Tarub diam-diam mengambil salah satu pakaian milik bidadari itu, dan kembali bersembunyi.",
                "\n \n",
-               "Jaka Tarub merasa bersalah dan berkata, <em>\"Maafkan aku, aku yang mengambil pakaianmu. Aku akan mengembalikannya, tapi tolong izinkan aku berkenalan denganmu.\"</em>",
+               "Menjelang sore, para bidadari itu selesai mandi. Mereka mengenakan pakaian mereka kembali dan pulang menuju langit.",
                "\n \n",
-               "Bidadari-bidadari itu akhirnya tinggal di bumi, dan Nawang Wulan, yang sudah jatuh cinta pada Jaka Tarub, memutuskan untuk menikah dengannya. Mereka hidup bahagia dan memiliki seorang anak.",
+               "Namun, ada satu bidadari yang tidak ikut pulang. Sebab, dia kehilangan pakaiannya. Bak pahlawan, Jaka Tarub pun muncul dan meminjamkan kain kepada bidadari itu. Bidadari bernama Nawang Wulan itu lantas diajak Jaka untuk tinggal di rumahnya.",
                "\n \n",
-               "Namun, suatu hari, Nawang Wulan menemukan pakaian aslinya yang disembunyikan oleh Jaka. <em>\"Waktunya aku kembali ke surga. Aku akan merindukanmu, Jaka Tarub,\"</em> kata Nawang Wulan sedih.",
+               "Nawang Wulan pun akhirnya tinggal di bumi, perlahan ia pun jatuh cinta pada Jaka Tarub dan memutuskan untuk menikah dengannya. Mereka hidup bahagia dan dikaruniai seorang anak bernama Nawangsih.",
                "\n \n",
-               "Jaka Tarub dan anaknya hidup dengan rindu dan kesedihan. Namun, mereka selalu mengingat Nawang Wulan dengan cinta.",
+               "Sebagai seorang bidadari tentu saja dia memiliki kesaktian. Setiap hari dia bisa menciptakan nasi yang cukup dimakan sekeluarga dengan hanya memasukkan sehelai padi ke dalam periuk.",
+               "\n \n",
+               "Namun, kesaktiannya itu bisa hilang jika ada orang yang membuka periuk saat dia memasak nasi. Dia selalu berpesan kepada Jaka Tarub untuk tidak membuka periuk itu.",
+               "\n \n",
+               "Suatu hari, ketika sedang memasak, Nawang Wulan ingin ssekalian mencuci pakaian. Dia berpesan kepada Jaka Tarub untuk mengasuh anak mereka.",
+               "\n \n",
+               "Saat Nawang Wulan sedang mencuci, muncul rasa penasaran Jaka Tarub. Meski sudah diperingatkan tetapi rasa penasarannya terlalu besar, dia pun akhirnya membuka periuk itu. Betapa terkejutnya Jaka saat dia melihat ternyata selama ini Nawang Wulan hanya memasak sehelai padi untuk mereka makan.",
+               "\n \n",
+               "Rasa penasaran itu akibatnya sangat besar. Kini, kesaktian Nawang Wulan lenyap. Sehingga ia harus memasak beras agar keluarganya bisa makan. Karena ini persediaan beras di lumbung yang selama ini tidak pernah berkurang lama-kelamaan mulai habis.",
+               "\n \n",
+               "Setiap hari Nawang Wulan mengambil persediaan beras di lumbung. Saat persediaan menipis, betapa terkejutnya dia ketika menemukan sehelai baju di lumbung. Baju itu merupakan bajunya yang hilang saat mandi di telaga.",
+               "\n \n",
+               "Nawang Wulan pun akhirnya sadar bahwa pakaian itu memang sengaja dicuri dan disembunyikan oleh Jaka Tarub. Dia lantas segera mengenakan pakaian itu kembali dan berubah menjadi bidadari.",
+               "\n \n",
+               "Setelah berpesan kepada Jaka Tarub untuk terus merawat anak mereka, akhirnya Nawang Wulan pulang kembali ke kayangan dan meninggalkan mereka di bumi.",
           ].join(""),
           morals: [
                "Dongeng Jaka Tarub adalah tentang <strong>kebaikan hati</strong>, <strong>pengorbanan</strong>, dan <strong>cinta yang tulus</strong>.",
                "\n",
                "Selain itu, kisah ini juga mengajarkan bahwa kebaikan hati, pengorbanan, dan cinta yang tulus adalah hal-hal yang sangat berharga dalam kehidupan.",
+          ].join(""),
+          synopsis: [
+               "Jaka Tarub bertemu dengan tujuh bidadari yang sedang mandi. Karena jatuh cinta, ia mengambil salah satu pakaian bidadari agar ia tidak bisa kembali ke langit.",
           ].join(""),
      },
 ];
