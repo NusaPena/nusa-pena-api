@@ -26,28 +26,86 @@ localhost:5000
 ```
 
 ### Get List of Stories
-Endpoint  : `/list`            <br>
-method    : `GET`              <br>
+Endpoint  : `/list`  
+method    : `GET`
 
 Response JSON :
 ```bash
   status: "success",
   stories: [ 
-      { id, title, category, imageId, storyDesc }
+    {
+      "id": "string",
+      "title": "string",
+      "category": "string",
+      "imageId": "string",
+      "synopsis": "string"
+    }
+  ]
+```
+
+### Get Filtered List of Stories By 'title'
+Endpoint  : `/list?title=<query>`  
+method    : `GET`
+
+Response JSON :
+```bash
+  status: "success",
+  stories: [ 
+    {
+      "id": "string",
+      "title": "string",
+      "category": "string",
+      "imageId": "string",
+      "synopsis": "string"
+    }
+  ]
+```
+
+### Get Filtered List of Stories By 'category'
+Endpoint  : `/list?category=query>`  
+method    : `GET`
+
+Response JSON :
+```bash
+  status: "success",
+  stories: [ 
+    {
+      "id": "string",
+      "title": "string",
+      "category": "string",
+      "imageId": "string",
+      "synopsis": "string"
+    }
   ]
 ```
 
 ### Get Detail of Story
-Endpoint  : `bash/details/:id` <br>
-method    : `GET`              <br>
+Endpoint  : `/details/:id`  
+method    : `GET`  
+
+Response JSON :  
+Success Response
 ```bash
   status: "success",
-  stories: [ 
-      { id, title, category, imageId, storyDesc, morals }
-  ]
+  story: {
+    "id": "string",
+    "title": "string",
+    "category": "string",
+    "imageId": "string",
+    "storyDesc": "string",
+    "morals": "string",
+    "synopsis": "string"
+  }
+```
+Fail Response
+```bash
+{
+  "status": "fail",
+  "message": "Detail cerita tidak ditemukan"
+}
 ```
 
 ### Stories Image
-Small Resolution  : `localhost:5000/images/small/<imageId>`  <br>
-Medium Resolution : `localhost:5000/images/medium/<imageId>` <br>
-Large Resolution  : `localhost:5000/images/large/<imageId>`  <br>
+Small Resolution  : `localhost:5000/images/small/<imageId>`  
+Medium Resolution : `localhost:5000/images/medium/<imageId>`  
+Large Resolution  : `localhost:5000/images/large/<imageId>`
