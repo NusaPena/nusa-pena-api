@@ -4,7 +4,7 @@ const stories = [
 		title: "Si Kancil dan Buaya",
 		category: "Fabel",
 		location: "Nusantara",
-          imageId: "test",
+          imageId: "100",
 		storyDesc: [
                "Pada suatu hari yang cerah, di sebuah hutan yang rindang, hiduplah seekor kancil kecil yang cerdik bernama Kancil. Kancil suka berpetualang di hutan, mencari makan dan bermain dengan teman-temannya. Suatu hari, setelah berkeliling hutan, Kancil merasa sangat haus. Dia ingin pergi ke sungai untuk minum air yang segar dan dingin.",
                "\n \n",
@@ -63,7 +63,7 @@ const stories = [
           title: "Kelinci dan Kura-Kura",
           category: "Fabel",
           location: "Nusantara",
-          imageId: "test",
+          imageId: "101",
           storyDesc: [
                "Pada suatu hari yang cerah di hutan, hiduplah dua sahabat yang sangat berbeda. Kelinci, yang terkenal karena kecepatannya, dan Kura-Kura, yang dikenal karena kesabarannya. Keduanya sering menghabiskan waktu bersama, meskipun kelinci sering mengejek kura-kura karena lambat.",
                "\n \n",
@@ -105,7 +105,7 @@ const stories = [
           title: "Semut dan Belalang",
           category: "Fabel",
           location: "Nusantara",
-          imageId: "test",
+          imageId: "102",
           storyDesc: [
                "Di sebuah ladang yang subur di Nusantara, hiduplah dua sahabat yang sangat berbeda, yaitu semut dan belalang. Semut adalah makhluk yang rajin bekerja dan selalu bekerja keras untuk menyimpan makanan untuk musim kemarau. Sementara itu, belalang adalah makhluk yang senang bermain dan tidak suka bekerja keras.",
                "\n \n",
@@ -135,7 +135,7 @@ const stories = [
           title: "Bebek Buruk Rupa",
           category: "Fabel",
           location: "Nusantara",
-          imageId: "test",
+          imageId: "103",
           storyDesc: [
                "Di sebuah desa di Nusantara, hiduplah seekor bebek yang sangat buruk rupa. Bulunya kusam, paruhnya bengkok, dan kakinya kecil. Bebek ini sering diolok-olok oleh bebek-bebek lain di sekitarnya karena penampilannya yang tidak menarik. Namun, bebek ini memiliki hati yang baik dan selalu bersikap ramah terhadap siapa pun.",
                "\n \n",
@@ -169,7 +169,7 @@ const stories = [
           title: "Si Kancil Pencuri Ketimun",
           category: "Fabel",
           location: "Nusantara",
-          imageId: "test",
+          imageId: "104",
           storyDesc: [
                "Di hutan belantara Nusantara, hiduplah seorang kancil cerdik dan lincah yang dikenal sebagai si Kancil. Kancil adalah hewan yang paling cerdik di hutan tersebut. Dia selalu pandai dalam menemukan cara untuk mengatasi masalah.",
                "\n \n",
@@ -204,7 +204,7 @@ const stories = [
 		title: "Prabu Siliwangi",
 		category: "Sage",
 		location: "Jawa Barat",
-          imageId: "test",
+          imageId: "200",
 		storyDesc: [
                "Pada zaman dahulu, di tanah Sunda yang subur dan penuh dengan keindahan alam, berdirilah sebuah kerajaan besar bernama Pajajaran. Kerajaan ini dipimpin oleh seorang raja yang sangat bijaksana dan gagah perkasa, bernama Prabu Siliwangi. Beliau sangat dicintai oleh rakyatnya karena kebijaksanaannya, keberaniannya, dan keadilannya.",
                "\n \n",
@@ -250,7 +250,7 @@ const stories = [
 		title: "Jaka Tingkir",
 		category: "Sage",
 		location: "Jawa Tengah",
-          imageId: "test",
+          imageId: "201",
 		storyDesc: [
                "Pada zaman dahulu kala, di sebuah desa kecil di Jawa Tengah, hiduplah seorang pemuda yang bernama Jaka Tingkir. Jaka Tingkir adalah seorang pemuda yang gagah berani dan memiliki kekuatan yang luar biasa. Ia tinggal bersama ibunya di sebuah rumah sederhana. Walaupun hidup sederhana, Jaka Tingkir selalu bersemangat dan penuh kebaikan.",
                "\n \n",
@@ -285,7 +285,7 @@ const stories = [
 		title: "Sangkuriang",
           category: "Sage",
           location: "Jawa Barat",
-          imageId: "test",
+          imageId: "202",
 		storyDesc: [
                "Pada zaman dahulu kala, di sebuah kerajaan di Jawa Barat, hiduplah seorang putri yang sangat cantik dan cerdas bernama Dayang Sumbi. Dayang Sumbi tinggal di sebuah istana megah bersama ayahnya, sang raja. Namun, meskipun memiliki segala kemewahan, Dayang Sumbi merasa kesepian.",
                "\n \n",
@@ -321,7 +321,7 @@ const stories = [
           title: "Rawa Pening",
           category: "Sage",
           location: "Jawa Tengah",
-          imageId: "test",
+          imageId: "203",
 		storyDesc: [
                "Pada zaman dahulu kala, di sebuah desa kecil di Jawa Tengah, hiduplah seorang anak kecil bernama Baru Klinthing. Baru Klinthing adalah seorang anak yang luar biasa. Ia sebenarnya adalah inkarnasi dari seekor naga yang memiliki kekuatan ajaib. Meskipun begitu, Baru Klinthing tumbuh seperti anak-anak lainnya di desa tersebut.",
                "\n \n",
@@ -351,7 +351,7 @@ const stories = [
           title: "Malin Kundang",
           category: "Sage",
           location: "Sumatera Barat",
-          imageId: "test",
+          imageId: "204",
 		storyDesc: [
                "Pada zaman dahulu kala, di sebuah desa kecil di Sumatera Barat, hiduplah seorang pemuda bernama Malin Kundang. Malin Kundang adalah anak tunggal dari seorang janda miskin. Mereka hidup sangat sederhana, tetapi penuh kasih sayang dan kebahagiaan.",
                "\n \n",
@@ -381,7 +381,7 @@ const stories = [
 		title: "Legenda Danau Toba dan Pulau Samosir",
 		category: "Legenda",
 		location: "Sumatra Utara",
-          imageId: "test",
+          imageId: "300",
 		storyDesc: [
                "Pada suatu waktu yang sangat lama, di sebuah desa kecil yang dikelilingi oleh gunung-gunung hijau, hiduplah seorang pemuda bernama Toba. Toba adalah seorang petani yang rajin dan baik hati. Setiap hari, Toba bekerja di ladangnya, menanam padi dan sayuran.",
                "\n \n",
@@ -423,7 +423,7 @@ const stories = [
 		title: "Legenda Gunung Merapi",
 		category: "Legenda",
 		location: "Jawa Tengah",
-          imageId: "test",
+          imageId: "301",
 		storyDesc: [
                "Pada zaman dahulu kala, di tanah Jawa yang subur, hiduplah seorang raja yang bijaksana bernama Prabu Siliwangi. Kerajaannya sangat makmur dan rakyatnya hidup damai dan bahagia. Namun, di dekat kerajaan tersebut, ada sebuah gunung besar yang sangat terkenal, yaitu Gunung Merapi.",
                "\n \n",
@@ -461,7 +461,7 @@ const stories = [
 		title: "Legenda Situ Bagendit",
 		category: "Legenda",
 		location: "Jawa Barat",
-          imageId: "test",
+          imageId: "302",
 		storyDesc: [
                "Pada zaman dahulu kala, di sebuah desa di Garut, Jawa Barat, hiduplah seorang wanita kaya bernama Nyai Endit. Nyai Endit memiliki banyak harta, ladang yang luas, dan rumah yang besar. Namun, meskipun sangat kaya, Nyai Endit adalah orang yang sangat pelit dan tidak mau berbagi dengan orang lain.",
                "\n \n",
@@ -497,7 +497,7 @@ const stories = [
 		title: "Legenda Si Joko Kendil",
 		category: "Legenda",
 		location: "Jawa Tengah",
-          imageId: "test",
+          imageId: "303",
 		storyDesc: [
                "Pada zaman dahulu kala, di sebuah desa yang damai dan subur, hiduplah seorang anak laki-laki yang aneh bernama Joko Kendil. Dia disebut Joko Kendil karena tubuhnya kecil dan bundar seperti kendil, sebuah periuk tanah liat.",
                "\n \n",
@@ -539,7 +539,7 @@ const stories = [
 		title: "Legenda Banyuwangi",
 		category: "Legenda",
 		location: "Jawa Timur",
-          imageId: "test",
+          imageId: "304",
 		storyDesc: [
                "Dahulu kala, di sebuah kerajaan yang damai di Jawa Timur, hiduplah seorang raja yang bijaksana bersama putri cantiknya yang bernama Putri Sri Tanjung. Putri Sri Tanjung terkenal tidak hanya karena kecantikannya, tetapi juga karena hatinya yang baik dan lembut.",
                "\n \n",
@@ -581,7 +581,7 @@ const stories = [
 		title: "Cinderalas",
 		category: "Dongeng",
 		location: "Jawa Timur",
-          imageId: "test",
+          imageId: "400",
 		storyDesc: [
                "Pada suatu masa di kerajaan Jenggala, hiduplah seorang raja yang bijaksana bernama Raden Putra. Sang raja memiliki seorang permaisuri yang cantik dan baik hati. Namun, kebahagiaan mereka terusik oleh perbuatan jahat seorang selir yang iri hati. Selir tersebut ingin menjadi satu-satunya istri raja dan merencanakan sebuah fitnah untuk menjatuhkan permaisuri. Ia bersekongkol dengan tabib istana untuk memfitnah permaisuri dengan tuduhan bahwa permaisuri telah meracuni raja.",
                "\n \n",
@@ -622,7 +622,7 @@ const stories = [
 		title: "Bawang Merah dan Bawang Putih",
 		category: "Dongeng",
 		location: "Sumatra",
-          imageId: "test",
+          imageId: "401",
           storyDesc: [
                "Pada suatu waktu di desa yang jauh, hiduplah seorang gadis baik hati bernama Bawang Putih. Dia tinggal bersama ayahnya dan ibu tirinya yang sangat jahat serta saudara tirinya yang bernama Bawang Merah. Bawang Merah dan ibunya selalu membuat Bawang Putih bekerja keras, sementara mereka bermalas-malasan.",
                "\n \n",
@@ -664,7 +664,7 @@ const stories = [
 		title: "Keong Emas",
 		category: "Dongeng",
 		location: "Jawa Tengah",
-          imageId: "test",
+          imageId: "402",
           storyDesc: [
                "Pada zaman dahulu kala, di sebuah kerajaan yang damai, hiduplah seorang putri cantik bernama Candra Kirana. Candra Kirana tinggal di istana bersama ayahnya, Raja Kertamarta, dan kakaknya, Dewi Galuh. Meskipun hidup di istana yang megah, Candra Kirana selalu bersikap baik hati dan ramah kepada semua orang.",
                "\n \n",
@@ -696,7 +696,7 @@ const stories = [
 		title: "Timun Emas",
 		category: "Dongeng",
 		location: "Jawa Tengah",
-          imageId: "test",
+          imageId: "403",
           storyDesc: [
                "Pada zaman dahulu kala, hiduplah seorang janda tua bernama Mbok Srini. Mbok Srini sangat merindukan seorang anak. Setiap hari, dia berdoa kepada Tuhan agar diberikan seorang anak. Suatu hari, ketika Mbok Srini sedang bekerja di ladang, seorang raksasa muncul di depannya.",
                "\n",
@@ -738,7 +738,7 @@ const stories = [
 		title: "Jaka Tarub",
 		category: "Dongeng",
 		location: "Jawa Tengah",
-          imageId: "test",
+          imageId: "404",
           storyDesc: [
                "Dahulu kala, di sebuah desa yang indah di Jawa,  hiduplah seorang pemuda bernama Jaka Tarub. Dia merupakan pemuda desa yang gemar berburu.",
                "\n \n",
