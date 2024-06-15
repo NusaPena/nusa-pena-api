@@ -1,2 +1,2 @@
-/src/detail
-/src/list
+# ? Prevent modifying the contents of the stories array
+/src/stories-data 
