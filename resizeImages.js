@@ -24,7 +24,7 @@ fs.readdir(inputDirectory, (err, files) => {
   if (err) throw err;
 
   files.forEach(file => {
-    if (path.extname(file) === '.png') {
+    if (path.extname(file) === '.jpg') {
       const inputPath = path.join(inputDirectory, file);
       
       Object.keys(sizes).forEach(sizeKey => {
