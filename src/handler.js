@@ -85,6 +85,7 @@ const getAllStoriesHandler = (request, h) => {
                id: story.id,
                title: story.title,
                category: story.category,
+               origin: story.origin,
                imageId: story.imageId,
                synopsis: story.synopsis,
           })),
@@ -93,7 +94,7 @@ const getAllStoriesHandler = (request, h) => {
 
 const getStoryDetailById = (request, h) => {
      const { storyId } = request.params;
-     console.log(`Received request for storyId: ${storyId}`);    // ? For temporary testing
+     console.log(`Received request for storyId: ${storyId}`);
 
      const story = storyDetails.find((indexStory) => indexStory.id === storyId);
           if (story) {
