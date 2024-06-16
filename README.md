@@ -19,6 +19,22 @@ or
 npm run start-dev
 ```
 
+#### Run ESLint 
+```bash
+npm run lint
+```
+or
+#### Run ESLint with Auto Fix
+```bash
+npm run lint-fix
+```
+
+#### Run Image Resizer
+```bash
+npm run resize-images
+```
+
+
 ## API Documentation
 ### Base URL Endpoint
 ```bash
@@ -37,6 +53,7 @@ Response JSON :
       "id": "string",
       "title": "string",
       "category": "string",
+      "origin": "string",
       "imageId": "string",
       "synopsis": "string"
     }
@@ -55,6 +72,7 @@ Response JSON :
       "id": "string",
       "title": "string",
       "category": "string",
+      "origin": "string",
       "imageId": "string",
       "synopsis": "string"
     }
@@ -73,6 +91,7 @@ Response JSON :
       "id": "string",
       "title": "string",
       "category": "string",
+      "origin": "string",
       "imageId": "string",
       "synopsis": "string"
     }
@@ -91,6 +110,7 @@ Success Response
     "id": "string",
     "title": "string",
     "category": "string",
+    "origin": "string",
     "imageId": "string",
     "storyDesc": "string",
     "morals": "string",
