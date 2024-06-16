@@ -6,11 +6,10 @@ const fs = require("fs");
 const storyList = require("./stories-data/stories");
 const storyDetails = require("./stories-data/stories");
 
-const test = (request, h) => {
-     const response = h.response("<h1>Test Page</h1>").type("text/html").code(200);
-
-     return response;
-};
+const getInformationHandler = (request, h) => h.response({
+     status: "success",
+     message: "API Documentation: https://github.com/NusaPena/nusa-pena-api",
+}).code(200);
 
 const getImageHandler = (size) => (request, h) => {
      const { imageId } = request.params;
@@ -89,7 +88,7 @@ const getStoryDetailById = (request, h) => {
 };
 
 module.exports = {
-     test,
+     getInformationHandler,
      getSmallImageHandler: getImageHandler("Small"),
      getMediumImageHandler: getImageHandler("Medium"),
      getLargeImageHandler: getImageHandler("Large"),
