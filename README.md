@@ -34,6 +34,11 @@ npm run lint-fix
 npm run resize-images
 ```
 
+#### Run newman (Postman) Test
+```bash
+npm run test
+```
+
 
 ## API Documentation
 ### Base URL Endpoint

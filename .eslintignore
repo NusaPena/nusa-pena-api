@@ -1,2 +1,4 @@
 # ? Prevent modifying the contents of the stories array
 /src/stories-data 
+/src/test/story-api-test.postman_collection
+/src/test/story-api-test.postman_environment
