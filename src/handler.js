@@ -89,9 +89,9 @@ const getStoryDetailById = (request, h) => {
 
 module.exports = {
      getInformationHandler,
-     getSmallImageHandler: getImageHandler("Small"),
-     getMediumImageHandler: getImageHandler("Medium"),
-     getLargeImageHandler: getImageHandler("Large"),
+     getSmallImageHandler: getImageHandler("small"),
+     getMediumImageHandler: getImageHandler("medium"),
+     getLargeImageHandler: getImageHandler("large"),
      getAllStoriesHandler,
      getStoryDetailById,
 };
