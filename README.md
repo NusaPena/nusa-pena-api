@@ -43,7 +43,7 @@ npm run test
 ## API Documentation
 ### Base URL Endpoint
 ```bash
-localhost:5000
+nusapena-api.vercel.app
 ```
 
 ### Get List of Stories
@@ -131,6 +131,6 @@ Fail Response
 ```
 
 ### Stories Image
-Small Resolution  : `localhost:5000/images/small/<imageId>`  
-Medium Resolution : `localhost:5000/images/medium/<imageId>`  
-Large Resolution  : `localhost:5000/images/large/<imageId>`
+Small Resolution  : `nusapena-api.vercel.app/images/small/<imageId>`  
+Medium Resolution : `nusapena-api.vercel.app/images/medium/<imageId>`  
+Large Resolution  : `nusapena-api.vercel.app/images/large/<imageId>`

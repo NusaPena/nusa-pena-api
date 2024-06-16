@@ -614,7 +614,7 @@
 							"    const responseJson = pm.response.json();\r",
 							"        pm.expect(responseJson).to.be.an('object');\r",
 							"        pm.expect(responseJson).to.have.property('status', 'fail');\r",
-							"        pm.expect(responseJson).to.have.property('message', 'Gagal menemukan gambar (Small)');\r",
+							"        pm.expect(responseJson).to.have.property('message', 'Gagal menemukan gambar (small)');\r",
 							"});"
 						],
 						"type": "text/javascript",
@@ -660,7 +660,7 @@
 							"    const responseJson = pm.response.json();\r",
 							"        pm.expect(responseJson).to.be.an('object');\r",
 							"        pm.expect(responseJson).to.have.property('status', 'fail');\r",
-							"        pm.expect(responseJson).to.have.property('message', 'Gagal menemukan gambar (Medium)');\r",
+							"        pm.expect(responseJson).to.have.property('message', 'Gagal menemukan gambar (medium)');\r",
 							"});"
 						],
 						"type": "text/javascript",
@@ -706,7 +706,7 @@
 							"    const responseJson = pm.response.json();\r",
 							"        pm.expect(responseJson).to.be.an('object');\r",
 							"        pm.expect(responseJson).to.have.property('status', 'fail');\r",
-							"        pm.expect(responseJson).to.have.property('message', 'Gagal menemukan gambar (Large)');\r",
+							"        pm.expect(responseJson).to.have.property('message', 'Gagal menemukan gambar (large)');\r",
 							"});"
 						],
 						"type": "text/javascript",
