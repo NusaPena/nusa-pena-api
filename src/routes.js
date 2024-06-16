@@ -1,5 +1,5 @@
 const {
-	test,
+	getInformationHandler,
 	getSmallImageHandler,
 	getMediumImageHandler,
 	getLargeImageHandler,
@@ -11,7 +11,7 @@ const routes = [
 	{
 		method: "*",
 		path: "/",
-		handler: test,
+		handler: getInformationHandler,
 	},
 	{
 		method: "GET",
