@@ -1,7 +1,11 @@
-![Gambar](src/images/icons-x72.png)# NusaPena
+<p align="center">
+   <img src="src/images/icons/icon-x192.png" alt="Logo" width="150px">
+</p>
+
+# 🖋️ NusaPena   
 Back-End REST API for NusaPena
 
-## GETTING STARTED
+## 🚀 GETTING STARTED
 ### Instalations
 Install all necessary packages using NPM
 ```bash
@@ -46,7 +50,7 @@ npm run test-api
 
 
 
-## API Documentation
+## 📃 API Documentation
 ### Base URL Endpoint
 ```bash
 nusapena-api.vercel.app
