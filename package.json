@@ -9,7 +9,8 @@
     "start-dev": "nodemon src/server.js",
     "start-prod": "NODE_ENV=production node src/api/server.js",
     "resize-images": "node resizeImages.js",
-    "test": "newman run src/test/story-api-test.postman_collection.json --environment src/test/story-api-test.postman_environment.json"
+    "test-local": "newman run src/test/local/story-local-test.postman_collection.json --environment src/test/local/story-local-test.postman_environment.json",
+    "test-api": "newman run src/test/api/story-api-test.postman_collection.json --environment src/test/api/story-api-test.postman_environment.json"
   },
   "author": "",
   "license": "ISC",
