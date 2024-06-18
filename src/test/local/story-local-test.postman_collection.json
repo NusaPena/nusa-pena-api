@@ -1,0 +1,767 @@
+{
+	"info": {
+		"_postman_id": "678f6965-44fd-42a2-939f-e357ab614f33",
+		"name": "Story API Test",
+		"description": "# 🚀 Get started here\n\nThis template guides you through CRUD operations (GET, POST, PUT, DELETE), variables, and tests.\n\n## 🔖 **How to use this template**\n\n#### **Step 1: Send requests**\n\nRESTful APIs allow you to perform CRUD operations using the POST, GET, PUT, and DELETE HTTP methods.\n\nThis collection contains each of these [request](https://learning.postman.com/docs/sending-requests/requests/) types. Open each request and click \"Send\" to see what happens.\n\n#### **Step 2: View responses**\n\nObserve the response tab for status code (200 OK), response time, and size.\n\n#### **Step 3: Send new Body data**\n\nUpdate or add new data in \"Body\" in the POST request. Typically, Body data is also used in PUT request.\n\n```\n{\n    \"name\": \"Add your name in the body\"\n}\n\n ```\n\n#### **Step 4: Update the variable**\n\nVariables enable you to store and reuse values in Postman. We have created a [variable](https://learning.postman.com/docs/sending-requests/variables/) called `base_url` with the sample request [https://postman-api-learner.glitch.me](https://postman-api-learner.glitch.me). Replace it with your API endpoint to customize this collection.\n\n#### **Step 5: Add tests in the \"Scripts\" tab**\n\nAdding tests to your requests can help you confirm that your API is working as expected. You can write test scripts in JavaScript and view the output in the \"Test Results\" tab.\n\n<img src=\"https://content.pstmn.io/fa30ea0a-373d-4545-a668-e7b283cca343/aW1hZ2UucG5n\" alt=\"\" height=\"1530\" width=\"2162\">\n\n## 💪 Pro tips\n\n- Use folders to group related requests and organize the collection.\n    \n- Add more [scripts](https://learning.postman.com/docs/writing-scripts/intro-to-scripts/) to verify if the API works as expected and execute workflows.\n    \n\n## 💡Related templates\n\n[API testing basics](https://go.postman.co/redirect/workspace?type=personal&collectionTemplateId=e9a37a28-055b-49cd-8c7e-97494a21eb54&sourceTemplateId=ddb19591-3097-41cf-82af-c84273e56719)  \n[API documentation](https://go.postman.co/redirect/workspace?type=personal&collectionTemplateId=e9c28f47-1253-44af-a2f3-20dce4da1f18&sourceTemplateId=ddb19591-3097-41cf-82af-c84273e56719)  \n[Authorization methods](https://go.postman.co/redirect/workspace?type=personal&collectionTemplateId=31a9a6ed-4cdf-4ced-984c-d12c9aec1c27&sourceTemplateId=ddb19591-3097-41cf-82af-c84273e56719)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "35056568"
+	},
+	"item": [
+		{
+			"name": "Get Base API",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test('response status code should have 200 value', () => {\r",
+							"   pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test('response Content-Type header should have application/json value', () => {\r",
+							"   pm.expect(pm.response.headers.get('Content-Type')).to.equals('application/json; charset=utf-8');\r",
+							"}); \r",
+							"\r",
+							"pm.test('response body should contain documentation message', () => {\r",
+							"    const responseJson = pm.response.json();\r",
+							"        pm.expect(responseJson).to.have.property('status', 'success');\r",
+							"        pm.expect(responseJson).to.have.property('message', 'API Documentation: https://github.com/NusaPena/nusa-pena-api');\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:{{port}}/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "{{port}}",
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Stories List",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test('response status code should have 200 value', () => {",
+							"   pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test('response Content-Type header should have application/json value', () => {",
+							"   pm.expect(pm.response.headers.get('Content-Type')).to.equals('application/json; charset=utf-8');",
+							"}); ",
+							"",
+							"",
+							"pm.test('response body should an object', () => {",
+							"    const responseJson = pm.response.json();",
+							"        pm.expect(responseJson).to.be.an('object');",
+							"}); ",
+							"",
+							"pm.test('response body object should have correct property and value', () => {",
+							"    const responsJson = pm.response.json();",
+							"        pm.expect(responsJson).to.haveOwnProperty('status');",
+							"        pm.expect(responsJson).to.haveOwnProperty('stories');",
+							"",
+							"        pm.expect(responsJson.status).to.equals('success');",
+							"        pm.expect(responsJson.stories).to.be.an('array');",
+							"});",
+							"",
+							"pm.test('response body stories should be an array and contain at least 2 item', () => {",
+							"    const responseJson = pm.response.json();",
+							"        pm.expect(responseJson.stories).to.be.an('array');",
+							"        pm.expect(responseJson.stories).lengthOf.at.least(2);",
+							"});",
+							"",
+							"pm.test('each story should have contains only id, title, category, origin, imageId and synopsis property', () => {",
+							"    const responseJson = pm.response.json();",
+							"    const { stories } = responseJson;",
+							"        stories.forEach((story) => {",
+							"            pm.expect(Object.keys(story)).to.lengthOf(6);",
+							"            pm.expect(story).to.haveOwnProperty('id');",
+							"            pm.expect(story).to.haveOwnProperty('title');",
+							"            pm.expect(story).to.haveOwnProperty('category');",
+							"            pm.expect(story).to.haveOwnProperty('origin');",
+							"            pm.expect(story).to.haveOwnProperty('imageId');",
+							"            pm.expect(story).to.haveOwnProperty('synopsis');",
+							"        });",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:{{port}}/list",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "{{port}}",
+					"path": [
+						"list"
+					]
+				},
+				"description": "This is a GET request and it is used to \"get\" data from an endpoint. There is no request body for a GET request, but you can use query parameters to help specify the resource you want data on (e.g., in this request, we have `id=1`).\n\nA successful GET response will have a `200 OK` status, and should include some kind of response body - for example, HTML web content or JSON data."
+			},
+			"response": []
+		},
+		{
+			"name": "Get Filtered Story By Category",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test('response status code should have 200 value', () => {\r",
+							"   pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test('response Content-Type header should have application/json value', () => {\r",
+							"   pm.expect(pm.response.headers.get('Content-Type')).to.equals('application/json; charset=utf-8');\r",
+							"}); \r",
+							"\r",
+							"\r",
+							"pm.test('response body should an object', () => {\r",
+							"    const responseJson = pm.response.json();\r",
+							"        pm.expect(responseJson).to.be.an('object');\r",
+							"}); \r",
+							"\r",
+							"pm.test('response body object should have correct property and value', () => {\r",
+							"    const responsJson = pm.response.json();\r",
+							"        pm.expect(responsJson).to.haveOwnProperty('status');\r",
+							"        pm.expect(responsJson).to.haveOwnProperty('stories');\r",
+							"\r",
+							"        pm.expect(responsJson.status).to.equals('success');\r",
+							"        pm.expect(responsJson.stories).to.be.an('array');\r",
+							"});\r",
+							"\r",
+							"pm.test('response body stories should be an array and contain at least 2 item', () => {\r",
+							"    const responseJson = pm.response.json();\r",
+							"        pm.expect(responseJson.stories).to.be.an('array');\r",
+							"        pm.expect(responseJson.stories).lengthOf.at.least(2);\r",
+							"});\r",
+							"\r",
+							"pm.test('each story should have contains only id, title, category, origin, imageId and synopsis property', () => {\r",
+							"    const responseJson = pm.response.json();\r",
+							"    const { stories } = responseJson;\r",
+							"        stories.forEach((story) => {\r",
+							"            pm.expect(Object.keys(story)).to.lengthOf(6);\r",
+							"            pm.expect(story).to.haveOwnProperty('id');\r",
+							"            pm.expect(story).to.haveOwnProperty('title');\r",
+							"            pm.expect(story).to.haveOwnProperty('category');\r",
+							"            pm.expect(story).to.haveOwnProperty('origin');\r",
+							"            pm.expect(story).to.haveOwnProperty('imageId');\r",
+							"            pm.expect(story).to.haveOwnProperty('synopsis');\r",
+							"        });\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:{{port}}/list?category=Sage",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "{{port}}",
+					"path": [
+						"list"
+					],
+					"query": [
+						{
+							"key": "category",
+							"value": "Sage"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Filtered Story By Contain Title",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test('response status code should have 200 value', () => {\r",
+							"   pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test('response Content-Type header should have application/json value', () => {\r",
+							"   pm.expect(pm.response.headers.get('Content-Type')).to.equals('application/json; charset=utf-8');\r",
+							"}); \r",
+							"\r",
+							"\r",
+							"pm.test('response body should an object', () => {\r",
+							"    const responseJson = pm.response.json();\r",
+							"        pm.expect(responseJson).to.be.an('object');\r",
+							"}); \r",
+							"\r",
+							"pm.test('response body object should have correct property and value', () => {\r",
+							"    const responsJson = pm.response.json();\r",
+							"        pm.expect(responsJson).to.haveOwnProperty('status');\r",
+							"        pm.expect(responsJson).to.haveOwnProperty('stories');\r",
+							"\r",
+							"        pm.expect(responsJson.status).to.equals('success');\r",
+							"        pm.expect(responsJson.stories).to.be.an('array');\r",
+							"});\r",
+							"\r",
+							"pm.test('response body story should be an array and contain at least 2 item', () => {\r",
+							"    const responseJson = pm.response.json();\r",
+							"        pm.expect(responseJson.stories).to.be.an('array');\r",
+							"        pm.expect(responseJson.stories).lengthOf.at.least(2);\r",
+							"});\r",
+							"\r",
+							"pm.test('each story should have contains only id, title, category, origin, imageId and synopsis property', () => {\r",
+							"    const responseJson = pm.response.json();\r",
+							"    const { stories } = responseJson;\r",
+							"        stories.forEach((story) => {\r",
+							"            pm.expect(Object.keys(story)).to.lengthOf(6);\r",
+							"            pm.expect(story).to.haveOwnProperty('id');\r",
+							"            pm.expect(story).to.haveOwnProperty('title');\r",
+							"            pm.expect(story).to.haveOwnProperty('category');\r",
+							"            pm.expect(story).to.haveOwnProperty('origin');\r",
+							"            pm.expect(story).to.haveOwnProperty('imageId');\r",
+							"            pm.expect(story).to.haveOwnProperty('synopsis');\r",
+							"        });\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:{{port}}/list?title=C",
+					"host": [
+						"localhost"
+					],
+					"port": "{{port}}",
+					"path": [
+						"list"
+					],
+					"query": [
+						{
+							"key": "title",
+							"value": "C"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Filtered Story By Spesific Title",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test('response status code should have 200 value', () => {\r",
+							"   pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test('response Content-Type header should have application/json value', () => {\r",
+							"   pm.expect(pm.response.headers.get('Content-Type')).to.equals('application/json; charset=utf-8');\r",
+							"}); \r",
+							"\r",
+							"\r",
+							"pm.test('response body should an object', () => {\r",
+							"    const responseJson = pm.response.json();\r",
+							"        pm.expect(responseJson).to.be.an('object');\r",
+							"}); \r",
+							"\r",
+							"pm.test('response body object should have correct property and value', () => {\r",
+							"    const responsJson = pm.response.json();\r",
+							"        pm.expect(responsJson).to.haveOwnProperty('status');\r",
+							"        pm.expect(responsJson).to.haveOwnProperty('stories');\r",
+							"\r",
+							"        pm.expect(responsJson.status).to.equals('success');\r",
+							"        pm.expect(responsJson.stories).to.be.an('array');\r",
+							"});\r",
+							"\r",
+							"pm.test('response body data should have a stories array and contain at least 1 item', () => {\r",
+							"    const responseJson = pm.response.json();\r",
+							"        pm.expect(responseJson.stories).to.be.an('array');\r",
+							"        pm.expect(responseJson.stories).lengthOf.at.least(1);\r",
+							"});\r",
+							"\r",
+							"pm.test('each story should have contains only id, title, category, origin, imageId and synopsis property', () => {\r",
+							"    const responseJson = pm.response.json();\r",
+							"    const { stories }  = responseJson;\r",
+							"        stories.forEach((story) => {\r",
+							"            pm.expect(Object.keys(story)).to.lengthOf(6);\r",
+							"            pm.expect(story).to.haveOwnProperty('id');\r",
+							"            pm.expect(story).to.haveOwnProperty('title');\r",
+							"            pm.expect(story).to.haveOwnProperty('category');\r",
+							"            pm.expect(story).to.haveOwnProperty('origin');\r",
+							"            pm.expect(story).to.haveOwnProperty('imageId');\r",
+							"            pm.expect(story).to.haveOwnProperty('synopsis');\r",
+							"        });\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:{{port}}/list?title=Cinderalas",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "{{port}}",
+					"path": [
+						"list"
+					],
+					"query": [
+						{
+							"key": "title",
+							"value": "Cinderalas"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Story With Correct Id",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test('response code should be 200', () => {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test('response header Content-Type should be application/json', () => {\r",
+							"    pm.expect(pm.response.headers.get('Content-Type')).to.equals('application/json; charset=utf-8');\r",
+							"});\r",
+							"\r",
+							"pm.test('response body should an object', () =>  {\r",
+							"    const responseJson = pm.response.json();\r",
+							"    pm.expect(responseJson).to.be.an('object');\r",
+							"});\r",
+							"\r",
+							"pm.test('response body story should contain correct property and value', () => {\r",
+							"    const responseJson = pm.response.json();\r",
+							"    const { story } = responseJson;\r",
+							"        pm.expect(story).to.haveOwnProperty('id');\r",
+							"        pm.expect(story).to.haveOwnProperty('title');\r",
+							"        pm.expect(story).to.haveOwnProperty('category');\r",
+							"        pm.expect(story).to.haveOwnProperty('origin');\r",
+							"        pm.expect(story).to.haveOwnProperty('imageId');\r",
+							"        pm.expect(story).to.haveOwnProperty('storyDesc');\r",
+							"        pm.expect(story).to.haveOwnProperty('morals');\r",
+							"        pm.expect(story).to.haveOwnProperty('synopsis');\r",
+							"\r",
+							"        pm.expect(story.id).to.equals(pm.environment.get('storyId'));\r",
+							"        pm.expect(story.title).to.equals(pm.environment.get('storedTitle'));\r",
+							"        pm.expect(story.category).to.equals(pm.environment.get('storedCategory'));\r",
+							"        pm.expect(story.origin).to.equals(pm.environment.get('storedOrigin'));\r",
+							"        pm.expect(story.imageId).to.equals(pm.environment.get('storedImageId'));\r",
+							"        pm.expect(story.storyDesc).to.equals(pm.environment.get('storedStoryDesc'));\r",
+							"        pm.expect(story.morals).to.equals(pm.environment.get('storedMorals'));\r",
+							"        pm.expect(story.synopsis).to.equals(pm.environment.get('storedSynopsis'));\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:{{port}}/details/{{storyId}}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "{{port}}",
+					"path": [
+						"details",
+						"{{storyId}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Story With Incorrect Id",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test('response code should be 404', () => {\r",
+							"    pm.response.to.have.status(404);\r",
+							"});\r",
+							"\r",
+							"pm.test('response header Content-Type should be application/json', () => {\r",
+							"    pm.expect(pm.response.headers.get('Content-Type')).to.equals('application/json; charset=utf-8');\r",
+							"});\r",
+							"\r",
+							"pm.test('response body should contain error message', () => {\r",
+							"        const responseJson = pm.response.json();\r",
+							"            pm.expect(responseJson).to.be.an('object');\r",
+							"            pm.expect(responseJson).to.have.property('status', 'fail');\r",
+							"            pm.expect(responseJson).to.have.property('message', 'Detail cerita tidak ditemukan');\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:{{port}}/details/{{invalidStoryId}}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "{{port}}",
+					"path": [
+						"details",
+						"{{invalidStoryId}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Small Story Image",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test('response status code should have 200 value', () => {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test('response Content-Type header should have image/jpeg value', () => {\r",
+							"    pm.expect(pm.response.headers.get('Content-Type')).to.equal('image/jpeg');\r",
+							"});\r",
+							"\r",
+							"pm.test('response should contain small image data', () => {\r",
+							"    pm.expect(pm.response.stream).to.be.an.instanceof(Uint8Array);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:{{port}}/images/small/{{imageId}}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "{{port}}",
+					"path": [
+						"images",
+						"small",
+						"{{imageId}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Medium Story Image",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test('response status code should have 200 value', () => {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test('response Content-Type header should have image/jpeg value', () => {\r",
+							"    pm.expect(pm.response.headers.get('Content-Type')).to.equal('image/jpeg');\r",
+							"});\r",
+							"\r",
+							"pm.test('response should contain small image data', () => {\r",
+							"    pm.expect(pm.response.stream).to.be.an.instanceof(Uint8Array);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:{{port}}/images/medium/{{imageId}}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "{{port}}",
+					"path": [
+						"images",
+						"medium",
+						"{{imageId}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Large Story Image",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test('response status code should have 200 value', () => {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test('response Content-Type header should have image/jpeg value', () => {\r",
+							"    pm.expect(pm.response.headers.get('Content-Type')).to.equal('image/jpeg');\r",
+							"});\r",
+							"\r",
+							"pm.test('response should contain small image data', () => {\r",
+							"    pm.expect(pm.response.stream).to.be.an.instanceof(Uint8Array);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:{{port}}/images/large/{{imageId}}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "{{port}}",
+					"path": [
+						"images",
+						"large",
+						"{{imageId}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Small Story Image With Invalid imageId",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test('response status code should have 404 value', () => {\r",
+							"    pm.response.to.have.status(404);\r",
+							"});\r",
+							"\r",
+							"pm.test('response Content-Type header should have application/json value', () => {\r",
+							"    pm.expect(pm.response.headers.get('Content-Type')).to.equal('application/json; charset=utf-8');\r",
+							"});\r",
+							"\r",
+							"pm.test('response body should contain error message', () => {\r",
+							"    const responseJson = pm.response.json();\r",
+							"        pm.expect(responseJson).to.be.an('object');\r",
+							"        pm.expect(responseJson).to.have.property('status', 'fail');\r",
+							"        pm.expect(responseJson).to.have.property('message', 'Gagal menemukan gambar (small)');\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:{{port}}/images/small/{{invalidImageId}}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "{{port}}",
+					"path": [
+						"images",
+						"small",
+						"{{invalidImageId}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Medium Story Image With Invalid imageId",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test('response status code should have 404 value', () => {\r",
+							"    pm.response.to.have.status(404);\r",
+							"});\r",
+							"\r",
+							"pm.test('response Content-Type header should have application/json value', () => {\r",
+							"    pm.expect(pm.response.headers.get('Content-Type')).to.equal('application/json; charset=utf-8');\r",
+							"});\r",
+							"\r",
+							"pm.test('response body should contain error message', () => {\r",
+							"    const responseJson = pm.response.json();\r",
+							"        pm.expect(responseJson).to.be.an('object');\r",
+							"        pm.expect(responseJson).to.have.property('status', 'fail');\r",
+							"        pm.expect(responseJson).to.have.property('message', 'Gagal menemukan gambar (medium)');\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:{{port}}/images/medium/{{invalidImageId}}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "{{port}}",
+					"path": [
+						"images",
+						"medium",
+						"{{invalidImageId}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Large Story Image With Invalid imageId",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test('response status code should have 404 value', () => {\r",
+							"    pm.response.to.have.status(404);\r",
+							"});\r",
+							"\r",
+							"pm.test('response Content-Type header should have application/json value', () => {\r",
+							"    pm.expect(pm.response.headers.get('Content-Type')).to.equal('application/json; charset=utf-8');\r",
+							"});\r",
+							"\r",
+							"pm.test('response body should contain error message', () => {\r",
+							"    const responseJson = pm.response.json();\r",
+							"        pm.expect(responseJson).to.be.an('object');\r",
+							"        pm.expect(responseJson).to.have.property('status', 'fail');\r",
+							"        pm.expect(responseJson).to.have.property('message', 'Gagal menemukan gambar (large)');\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:{{port}}/images/large/{{invalidImageId}}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "{{port}}",
+					"path": [
+						"images",
+						"large",
+						"{{invalidImageId}}"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "id",
+			"value": "1"
+		},
+		{
+			"key": "base_url",
+			"value": "https://postman-rest-api-learner.glitch.me/"
+		}
+	]
+}

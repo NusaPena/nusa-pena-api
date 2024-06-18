@@ -1,7 +1,7 @@
 {
 	"info": {
-		"_postman_id": "678f6965-44fd-42a2-939f-e357ab614f33",
-		"name": "Story API Test",
+		"_postman_id": "df5adaa2-bbe3-4456-a03c-3bbd01db7028",
+		"name": "Story API Test (Online)",
 		"description": "# 🚀 Get started here\n\nThis template guides you through CRUD operations (GET, POST, PUT, DELETE), variables, and tests.\n\n## 🔖 **How to use this template**\n\n#### **Step 1: Send requests**\n\nRESTful APIs allow you to perform CRUD operations using the POST, GET, PUT, and DELETE HTTP methods.\n\nThis collection contains each of these [request](https://learning.postman.com/docs/sending-requests/requests/) types. Open each request and click \"Send\" to see what happens.\n\n#### **Step 2: View responses**\n\nObserve the response tab for status code (200 OK), response time, and size.\n\n#### **Step 3: Send new Body data**\n\nUpdate or add new data in \"Body\" in the POST request. Typically, Body data is also used in PUT request.\n\n```\n{\n    \"name\": \"Add your name in the body\"\n}\n\n ```\n\n#### **Step 4: Update the variable**\n\nVariables enable you to store and reuse values in Postman. We have created a [variable](https://learning.postman.com/docs/sending-requests/variables/) called `base_url` with the sample request [https://postman-api-learner.glitch.me](https://postman-api-learner.glitch.me). Replace it with your API endpoint to customize this collection.\n\n#### **Step 5: Add tests in the \"Scripts\" tab**\n\nAdding tests to your requests can help you confirm that your API is working as expected. You can write test scripts in JavaScript and view the output in the \"Test Results\" tab.\n\n<img src=\"https://content.pstmn.io/fa30ea0a-373d-4545-a668-e7b283cca343/aW1hZ2UucG5n\" alt=\"\" height=\"1530\" width=\"2162\">\n\n## 💪 Pro tips\n\n- Use folders to group related requests and organize the collection.\n    \n- Add more [scripts](https://learning.postman.com/docs/writing-scripts/intro-to-scripts/) to verify if the API works as expected and execute workflows.\n    \n\n## 💡Related templates\n\n[API testing basics](https://go.postman.co/redirect/workspace?type=personal&collectionTemplateId=e9a37a28-055b-49cd-8c7e-97494a21eb54&sourceTemplateId=ddb19591-3097-41cf-82af-c84273e56719)  \n[API documentation](https://go.postman.co/redirect/workspace?type=personal&collectionTemplateId=e9c28f47-1253-44af-a2f3-20dce4da1f18&sourceTemplateId=ddb19591-3097-41cf-82af-c84273e56719)  \n[Authorization methods](https://go.postman.co/redirect/workspace?type=personal&collectionTemplateId=31a9a6ed-4cdf-4ced-984c-d12c9aec1c27&sourceTemplateId=ddb19591-3097-41cf-82af-c84273e56719)",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "35056568"
@@ -37,12 +37,13 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:{{port}}/",
-					"protocol": "http",
+					"raw": "https://nusapena-api.vercel.app/",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"nusapena-api",
+						"vercel",
+						"app"
 					],
-					"port": "{{port}}",
 					"path": [
 						""
 					]
@@ -86,7 +87,7 @@
 							"        pm.expect(responseJson.stories).lengthOf.at.least(2);",
 							"});",
 							"",
-							"pm.test('each story should have contains only id, title, category, imageId and storyDesc property', () => {",
+							"pm.test('each story should have contains only id, title, category, origin, imageId and synopsis property', () => {",
 							"    const responseJson = pm.response.json();",
 							"    const { stories } = responseJson;",
 							"        stories.forEach((story) => {",
@@ -109,12 +110,13 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:{{port}}/list",
-					"protocol": "http",
+					"raw": "https://nusapena-api.vercel.app/list",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"nusapena-api",
+						"vercel",
+						"app"
 					],
-					"port": "{{port}}",
 					"path": [
 						"list"
 					]
@@ -159,7 +161,7 @@
 							"        pm.expect(responseJson.stories).lengthOf.at.least(2);\r",
 							"});\r",
 							"\r",
-							"pm.test('each story should have contains only id, title, category, imageId and storyDesc property', () => {\r",
+							"pm.test('each story should have contains only id, title, category, origin, imageId and synopsis property', () => {\r",
 							"    const responseJson = pm.response.json();\r",
 							"    const { stories } = responseJson;\r",
 							"        stories.forEach((story) => {\r",
@@ -182,13 +184,15 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:{{port}}/list?category=Sage",
-					"protocol": "http",
+					"raw": "https://nusapena-api.vercel.app/list?category=Sage",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"nusapena-api",
+						"vercel",
+						"app"
 					],
-					"port": "{{port}}",
 					"path": [
+						"",
 						"list"
 					],
 					"query": [
@@ -237,7 +241,7 @@
 							"        pm.expect(responseJson.stories).lengthOf.at.least(2);\r",
 							"});\r",
 							"\r",
-							"pm.test('each story should have contains only id, title, category, imageId and storyDesc property', () => {\r",
+							"pm.test('each story should have contains only id, title, category, origin, imageId and synopsis property', () => {\r",
 							"    const responseJson = pm.response.json();\r",
 							"    const { stories } = responseJson;\r",
 							"        stories.forEach((story) => {\r",
@@ -260,11 +264,13 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "localhost:{{port}}/list?title=C",
+					"raw": "https://nusapena-api.vercel.app/list?title=C",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"nusapena-api",
+						"vercel",
+						"app"
 					],
-					"port": "{{port}}",
 					"path": [
 						"list"
 					],
@@ -314,7 +320,7 @@
 							"        pm.expect(responseJson.stories).lengthOf.at.least(1);\r",
 							"});\r",
 							"\r",
-							"pm.test('each story should have contains only id, title, category, imageId and storyDesc property', () => {\r",
+							"pm.test('each story should have contains only id, title, category, origin, imageId and synopsis property', () => {\r",
 							"    const responseJson = pm.response.json();\r",
 							"    const { stories }  = responseJson;\r",
 							"        stories.forEach((story) => {\r",
@@ -337,12 +343,13 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:{{port}}/list?title=Cinderalas",
-					"protocol": "http",
+					"raw": "https://nusapena-api.vercel.app/list?title=Cinderalas",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"nusapena-api",
+						"vercel",
+						"app"
 					],
-					"port": "{{port}}",
 					"path": [
 						"list"
 					],
@@ -407,12 +414,13 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:{{port}}/details/{{storyId}}",
-					"protocol": "http",
+					"raw": "https://nusapena-api.vercel.app/details/{{storyId}}",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"nusapena-api",
+						"vercel",
+						"app"
 					],
-					"port": "{{port}}",
 					"path": [
 						"details",
 						"{{storyId}}"
@@ -452,12 +460,13 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:{{port}}/details/{{invalidStoryId}}",
-					"protocol": "http",
+					"raw": "https://nusapena-api.vercel.app/details/{{invalidStoryId}}",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"nusapena-api",
+						"vercel",
+						"app"
 					],
-					"port": "{{port}}",
 					"path": [
 						"details",
 						"{{invalidStoryId}}"
@@ -494,12 +503,13 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:{{port}}/images/small/{{imageId}}",
-					"protocol": "http",
+					"raw": "https://nusapena-api.vercel.app/images/small/{{imageId}}",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"nusapena-api",
+						"vercel",
+						"app"
 					],
-					"port": "{{port}}",
 					"path": [
 						"images",
 						"small",
@@ -537,12 +547,13 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:{{port}}/images/medium/{{imageId}}",
-					"protocol": "http",
+					"raw": "https://nusapena-api.vercel.app/images/medium/{{imageId}}",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"nusapena-api",
+						"vercel",
+						"app"
 					],
-					"port": "{{port}}",
 					"path": [
 						"images",
 						"medium",
@@ -580,12 +591,13 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:{{port}}/images/large/{{imageId}}",
-					"protocol": "http",
+					"raw": "https://nusapena-api.vercel.app/images/large/{{imageId}}",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"nusapena-api",
+						"vercel",
+						"app"
 					],
-					"port": "{{port}}",
 					"path": [
 						"images",
 						"large",
@@ -626,12 +638,13 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:{{port}}/images/small/{{invalidImageId}}",
-					"protocol": "http",
+					"raw": "https://nusapena-api.vercel.app/images/small/{{invalidImageId}}",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"nusapena-api",
+						"vercel",
+						"app"
 					],
-					"port": "{{port}}",
 					"path": [
 						"images",
 						"small",
@@ -672,12 +685,13 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:{{port}}/images/medium/{{invalidImageId}}",
-					"protocol": "http",
+					"raw": "https://nusapena-api.vercel.app/images/medium/{{invalidImageId}}",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"nusapena-api",
+						"vercel",
+						"app"
 					],
-					"port": "{{port}}",
 					"path": [
 						"images",
 						"medium",
@@ -718,12 +732,13 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:{{port}}/images/large/{{invalidImageId}}",
-					"protocol": "http",
+					"raw": "https://nusapena-api.vercel.app/images/large/{{invalidImageId}}",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"nusapena-api",
+						"vercel",
+						"app"
 					],
-					"port": "{{port}}",
 					"path": [
 						"images",
 						"large",
