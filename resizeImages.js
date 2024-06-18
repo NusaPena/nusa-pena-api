@@ -2,14 +2,16 @@ const sharp = require("sharp");
 const fs = require("fs");
 const path = require("path");
 
-const inputDirectory = "src/images/medium";
+const inputDirectory = "src/images/ori";
 const outputDirectories = {
 	small: "src/images/small",
+	medium: "src/images/medium",
 	large: "src/images/large",
 };
 
 const sizes = {
 	small: 360,
+	medium: 640,
 	large: 1024,
 };
 
