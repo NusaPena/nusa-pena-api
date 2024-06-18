@@ -1,4 +1,4 @@
-# NusaPena
+![Gambar](src/images/icons-x72.png)# NusaPena
 Back-End REST API for NusaPena
 
 ## GETTING STARTED
@@ -34,10 +34,16 @@ npm run lint-fix
 npm run resize-images
 ```
 
-#### Run newman (Postman) Test
+#### Run newman (Postman) Test Locally
 ```bash
-npm run test
+npm run test-local
 ```
+or
+#### Run newman (Postman) Test API
+```bash
+npm run test-api
+```
+
 
 
 ## API Documentation
